@@ -1,10 +1,13 @@
 const plugin = require('tailwindcss/plugin')
 
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
 	theme: {
 		extend: {
+			colors: {
+				primary: '#F5FC00'
+			},
 			container: {
 				center: true,
 				padding: {
@@ -64,5 +67,3 @@ const config = {
 		})
 	]
 }
-
-module.exports = config

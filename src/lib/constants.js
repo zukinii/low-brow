@@ -1,6 +1,3 @@
-const constants = {
-	appName: 'Letters',
-	discordLink: 'https://discord.gg/yGh93kkPrP'
-}
+const constants = {}
 
 export default constants

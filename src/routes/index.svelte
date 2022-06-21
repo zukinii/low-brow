@@ -1,20 +1,10 @@
 <script>
-	import { user } from '$lib/sessionStore'
-	import { supabase } from '$lib/supabaseClient'
-	import Auth from '$lib/login/Login.svelte'
-	import Profile from './Profile.svelte'
-
-	user.set(supabase.auth.user())
-
-	supabase.auth.onAuthStateChange((_, session) => {
-		user.set(session.user)
-	})
+	import Sparkel from '$lib/assets/images/sparkel.svg'
 </script>
 
-<div class="container">
-	{#if $user}
-		<Profile />
-	{:else}
-		<Auth />
-	{/if}
+<div class="bg-primary text-black">
+	<div class="bg-black text-primary">
+		<Sparkel class="fill-current" />
+		<span>ART AS SPECTACLE OF EVERYDAY LIFE</span>
+	</div>
 </div>
