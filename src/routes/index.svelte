@@ -3,8 +3,6 @@
 	import FacebookSvg from '/src/svgs/facebook.svg'
 	import InstaSvg from '/src/svgs/insta.svg'
 	import TuesSvg from '/src/svgs/tues.svg'
-
-	// for structured-data info check https://developers.google.com/search/docs/advanced/structured-data/event
 </script>
 
 <svelte:head>
@@ -15,6 +13,7 @@
 	<meta property="og:image:type" content="image/png" />
 	<meta property="og:image:width" content="934" />
 	<meta property="og:image:height" content="934" />
+	<!-- for structured-data info check https://developers.google.com/search/docs/advanced/structured-data/event -->
 	<script type="application/ld+json">
 		{
       "@context": "https://schema.org",
@@ -57,6 +56,14 @@
 		<source srcset="/assets/images/baby@2x.png 2x" />
 		<img src="/assets/images/baby.png" alt="baby" />
 	</picture>
+	<div class="pointer-events-none fixed bottom-0 left-0 right-0 z-20">
+		<div class="container flex items-center justify-end">
+			<picture class="w-[30vw] lg:w-56">
+				<source srcset="/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
+				<img src="/assets/images/logo_extasier_schwarz_600x600px.png" alt="Extasier Kollektiv" />
+			</picture>
+		</div>
+	</div>
 	<div class="container relative z-10 flex min-h-screen flex-col justify-start">
 		<header class="pbs-5 mbe-24 lg:pbs-10">
 			<div class="header-bar">
@@ -69,7 +76,7 @@
 			</div>
 			<h1 class="font-heading font-bold">
 				<div
-					class="translate-y-1 -translate-x-[0.125rem] transform text-[53vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:text-[18.75rem] xl:-translate-x-2 xl:text-[24rem] 2xl:text-[29rem]"
+					class="translate-y-1 -translate-x-[0.125rem] transform text-[50vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:translate-y-4 lg:text-[18.75rem] xl:-translate-x-2 xl:translate-y-6 xl:text-[24rem] 2xl:text-[29rem]"
 				>
 					LOW BROW
 				</div>
@@ -82,7 +89,7 @@
 		</header>
 		<main>
 			<section class="date-section">
-				<div class="sideways-lr">
+				<div class="date-text-sideways flex flex-col items-center">
 					<div class="text-[4rem] leading-none lg:text-[12.5rem] lg:leading-[calc(155/200)]">
 						16 – 22 H
 					</div>
@@ -91,13 +98,6 @@
 					</div>
 				</div>
 				<div class="date-decoration-1">
-					<picture>
-						<source srcset="/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
-						<img
-							src="/assets/images/logo_extasier_schwarz_600x600px.png"
-							alt="Extasier Kollektiv"
-						/>
-					</picture>
 					<SparkelSvg />
 					<SparkelSvg />
 				</div>
@@ -106,7 +106,7 @@
 					<SparkelSvg />
 				</div>
 				<div
-					class="justify-self-end text-[4rem] leading-none sideways-lr lg:text-[12.5rem] lg:leading-[calc(155/200)]"
+					class="date-text-sideways justify-self-end text-[4rem] leading-none lg:text-[12.5rem] lg:leading-[calc(155/200)]"
 				>
 					<div>16.+17.</div>
 					<div>JULY '22</div>
@@ -117,47 +117,67 @@
 					<h2>WE LIKE IT LOW BRO(W)</h2>
 					<p>KUNST ALS SPEKTAKEL DES ALLTÄGLICHEN LEBENS.</p>
 				</header>
-				<p class="copy">
-					<span class="bg-primary"
-						>Diese Ausstellung widmen wir der vermeintlich intellektuell anspruchslosen Kunst:
-						Low-Brow! Was macht Kunst zur Kunst? Braucht sie die weiße Wand und perfekte
-						Inszenierung?</span
-					>
-				</p>
-				<p class="copy">
-					<span class="bg-primary"
-						>Wir nehmen das in unserer Ausstellung selbst in die Hand und emanzipieren Schönes und
-						Kunstvolles des alltäglichen Lebens durch die museale Zurschaustellung. Wir präsentieren
-						Techniken und Werke, Materialien und Formate, die in uns die Frage aufrufen, ob sie
-						kunstwürdig sind. In der LOW BROW-Ausstellung werden rund 30 Werke aus den Bereichen
-						Bildhauerei, Malerei, Architektur, Publikation, Installation, digitale Formate und mehr,
-						ausgestellt.</span
-					>
-				</p>
+				<div class="flex">
+					<div>
+						<p class="copy">
+							<span class="bg-primary"
+								>Diese Ausstellung widmen wir der vermeintlich intellektuell anspruchslosen Kunst:
+								Low-Brow! Was macht Kunst zur Kunst? Braucht sie die weiße Wand und perfekte
+								Inszenierung?</span
+							>
+						</p>
+						<p class="copy">
+							<span class="bg-primary"
+								>Wir nehmen das in unserer Ausstellung selbst in die Hand und emanzipieren Schönes
+								und Kunstvolles des alltäglichen Lebens durch die museale Zurschaustellung. Wir
+								präsentieren Techniken und Werke, Materialien und Formate, die in uns die Frage
+								aufrufen, ob sie kunstwürdig sind. In der LOW BROW-Ausstellung werden rund 30 Werke
+								aus den Bereichen Bildhauerei, Malerei, Architektur, Publikation, Installation,
+								digitale Formate und mehr, ausgestellt.</span
+							>
+						</p>
+					</div>
+					<div class="copy-decoration-1">
+						<SparkelSvg />
+						<SparkelSvg />
+					</div>
+				</div>
 			</section>
 			<section class="mbe-36">
 				<header class="copy-header">
-					<h2>EXTASIER- KOLLEKTIV</h2>
+					<div class="flex">
+						<h2>EXTASIER- KOLLEKTIV</h2>
+						<div class="copy-decoration-2">
+							<SparkelSvg />
+						</div>
+					</div>
 					<p>WIR STELLEN UNS VOR.</p>
 				</header>
-				<p class="copy">
-					<span class="bg-primary"
-						>Wir sind eine plurale Gruppe mit Headquarter in Salzburg, die sich aus den
-						verschiedensten Disziplinen und Interessen zusammensetzt. Wir – Künstler*innen,
-						Handwerk- we*innen, Arbeiter*innen, Reisende, Entwerfer*innen, Forscher*innen – haben
-						uns alliiert und sind zusammen das Kunstkollektiv EXTASIER.</span
-					>
-				</p>
-				<p class="copy">
-					<span class="bg-primary"
-						>Es geht nicht immer um den Ort, an dem Kunst passiert. Niemand gibt vor, was es ist
-						oder wohin es geht: Die Kiste mit der Katze ist unser Schaffensraum! Wir wollen
-						niemanden ausschließen, jedes Material verwenden, Fähigkeiten sowie Ideenlosigkeit
-						zelebrieren und damit alle Facetten der Kunst neu beschreben – nichts erfüllen. Gerade
-						durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
-						gesellschaftliche Thematiken, die uns alle betreffen können, sichtbar machen.</span
-					>
-				</p>
+				<div class="flex">
+					<div>
+						<p class="copy">
+							<span class="bg-primary"
+								>Wir sind eine plurale Gruppe mit Headquarter in Salzburg, die sich aus den
+								verschiedensten Disziplinen und Interessen zusammensetzt. Wir – Künstler*innen,
+								Handwerker*innen, Arbeiter*innen, Reisende, Entwerfer*innen, Forscher*innen – haben
+								uns alliiert und sind zusammen das Kunstkollektiv EXTASIER.</span
+							>
+						</p>
+						<p class="copy">
+							<span class="bg-primary"
+								>Es geht nicht immer um den Ort, an dem Kunst passiert. Niemand gibt vor, was es ist
+								oder wohin es geht: Die Kiste mit der Katze ist unser Schaffensraum! Wir wollen
+								niemanden ausschließen, jedes Material verwenden, Fähigkeiten sowie Ideenlosigkeit
+								zelebrieren und damit alle Facetten der Kunst neu beschreben – nichts erfüllen.
+								Gerade durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
+								gesellschaftliche Thematiken, die uns alle betreffen können, sichtbar machen.</span
+							>
+						</p>
+					</div>
+					<div class="copy-decoration-3">
+						<SparkelSvg />
+					</div>
+				</div>
 			</section>
 		</main>
 		<footer class="flex flex-col gap-6 mbs-auto pbe-5 lg:flex-row lg:gap-40 lg:pbe-10">
@@ -203,6 +223,27 @@
 		}
 	}
 
+	:global(html) {
+		// custom scrollbar for firefox (https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars)
+		@apply scrollbar-color-thumb-black scrollbar-color-track-primary scrollbar-color;
+
+		// custom scrollbar for chromium (https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
+		&::-webkit-scrollbar {
+			width: 2em;
+		}
+		&::-webkit-scrollbar-track {
+			@apply bg-primary;
+
+			// box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		}
+		&::-webkit-scrollbar-thumb {
+			@apply bg-black;
+		}
+
+		// custom cursor (https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+		cursor: url('/assets/images/cursor.png'), auto;
+	}
+
 	.header-bar {
 		@apply flex items-center justify-center bg-black text-primary pi-4 mbe-4;
 
@@ -225,12 +266,18 @@
 		grid-template-columns: 1fr 1fr;
 	}
 
-	.date-decoration-1 {
-		@apply flex flex-col justify-self-stretch;
+	.date-text-sideways {
+		writing-mode: vertical-rl;
+		transform: rotate(180deg);
 
-		:global(picture) {
-			@apply w-[32vw] self-end lg:w-60;
+		@supports (writing-mode: sideways-lr) {
+			writing-mode: sideways-lr;
+			transform: rotate(0deg);
 		}
+	}
+
+	.date-decoration-1 {
+		@apply flex flex-col justify-self-stretch pbs-32 lg:pbs-60;
 
 		:global(svg) {
 			@apply animate-sparkle fill-current motion-reduce:animate-none;
@@ -269,16 +316,52 @@
 		@apply font-heading font-bold mbe-8;
 
 		:global(h2) {
-			@apply max-w-[242px] text-8xl leading-[calc(77/100)] mbe-2 lg:max-w-7xl lg:text-[15rem] lg:leading-[calc(272/353)] lg:mbe-3 2xl:text-[22rem] 2xl:mbe-6;
+			@apply max-w-[242px] text-[min(6rem,25vw)] leading-[calc(77/100)] mbe-2 lg:max-w-7xl lg:text-[15rem] lg:leading-[calc(272/353)] lg:mbe-3 2xl:text-[22rem] 2xl:mbe-6;
 		}
 
 		:global(p) {
-			@apply text-5xl uppercase tracking-[0.96px] lg:text-7xl lg:leading-[calc(115/123)] lg:tracking-[2.46px] 2xl:text-9xl;
+			@apply max-w-5xl text-5xl uppercase tracking-[0.96px] lg:text-7xl lg:leading-[calc(115/123)] lg:tracking-[2.46px] 2xl:text-9xl;
 		}
 	}
 
 	.copy {
 		@apply text-2xl leading-[calc(36/24)] lg:max-w-[754px] [&:not(:last-child)]:mbe-12 lg:[&:not(:last-child)]:mbe-8;
+	}
+
+	.copy-decoration-1 {
+		@apply hidden lg:flex lg:flex-col lg:justify-center lg:mi-auto;
+
+		:global(svg) {
+			@apply animate-sparkle fill-current motion-reduce:animate-none;
+
+			&:nth-of-type(1) {
+				@apply h-20 w-20 self-center mie-40 mbe-20;
+			}
+
+			&:nth-of-type(2) {
+				@apply h-40 w-40 self-center;
+
+				animation-delay: 0.5s;
+			}
+		}
+	}
+
+	.copy-decoration-2 {
+		@apply hidden lg:flex lg:flex-col lg:justify-center lg:mi-auto;
+
+		:global(svg) {
+			@apply h-[4.5rem] w-[4.5rem] animate-sparkle self-center fill-current mbe-20 mis-16 motion-reduce:animate-none;
+		}
+	}
+
+	.copy-decoration-3 {
+		@apply hidden lg:flex lg:flex-col lg:justify-center lg:mi-auto;
+
+		:global(svg) {
+			@apply h-36 w-36 animate-sparkle self-center fill-current motion-reduce:animate-none;
+
+			animation-delay: 0.5s;
+		}
 	}
 
 	.footer-social {

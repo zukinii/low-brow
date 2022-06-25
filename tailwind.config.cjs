@@ -85,6 +85,17 @@ const config = {
 				},
 				{ values: { ...theme('spacing'), auto: 'auto' } }
 			),
+				matchUtilities(
+					{
+						'scrollbar-color-thumb': (value) => ({
+							'--tw-scrollbar-color-thumb': value
+						}),
+						'scrollbar-color-track': (value) => ({
+							'--tw-scrollbar-color-track': value
+						})
+					},
+					{ values: { ...theme('colors') } }
+				),
 				addUtilities({
 					'.horizontal-tb': {
 						writingMode: 'horizontal-tb'
@@ -100,6 +111,9 @@ const config = {
 					},
 					'.sideways-lr': {
 						writingMode: 'sideways-lr'
+					},
+					'.scrollbar-color': {
+						scrollbarColor: 'var(--tw-scrollbar-color-thumb) var(--tw-scrollbar-color-track)'
 					}
 				})
 		})
