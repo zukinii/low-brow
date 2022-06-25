@@ -1,8 +1,8 @@
 <script>
-	import SparkelSvg from '/src/assets/images/sparkel.svg'
-	import FacebookSvg from '/src/assets/images/facebook.svg'
-	import InstaSvg from '/src/assets/images/insta.svg'
-	import TuesSvg from '/src/assets/images/tues.svg'
+	import SparkelSvg from '/src/svgs/sparkel.svg'
+	import FacebookSvg from '/src/svgs/facebook.svg'
+	import InstaSvg from '/src/svgs/insta.svg'
+	import TuesSvg from '/src/svgs/tues.svg'
 
 	// for structured-data info check https://developers.google.com/search/docs/advanced/structured-data/event
 </script>
@@ -11,11 +11,10 @@
 	<title>LOW BROW EXHIBITION - extasier-kollektiv</title>
 	<meta name="description" content="LOW BROW Exhibition - Art as spectacle of everyday life" />
 	<meta name="theme-color" content="#F5FC00" />
-	<!-- TODO: Add share image -->
-	<meta property="og:image" content="http://example.com/logo.jpg" />
+	<meta property="og:image" content="/assets/images/baby-bg.png" />
 	<meta property="og:image:type" content="image/png" />
-	<meta property="og:image:width" content="1024" />
-	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:width" content="934" />
+	<meta property="og:image:height" content="934" />
 	<script type="application/ld+json">
 		{
       "@context": "https://schema.org",
@@ -55,8 +54,8 @@
 	<picture
 		class="container fixed top-1/2 left-1/2 grid max-h-screen w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 transform place-items-center"
 	>
-		<source srcset="/src/assets/images/baby@2x.png 2x" />
-		<img src="/src/assets/images/baby.png" alt="baby" />
+		<source srcset="/assets/images/baby@2x.png 2x" />
+		<img src="/assets/images/baby.png" alt="baby" />
 	</picture>
 	<div class="container relative z-10 flex min-h-screen flex-col justify-start">
 		<header class="pbs-5 mbe-24 lg:pbs-10">
@@ -82,26 +81,36 @@
 			</h1>
 		</header>
 		<main>
-			<section class="hidden mbe-52">
-				<div>
-					<div>16 – 22 H</div>
-					<div>STERNECKSTR. 22, 5020</div>
+			<section class="date-section">
+				<div class="sideways-lr">
+					<div class="text-[4rem] leading-none lg:text-[12.5rem] lg:leading-[calc(155/200)]">
+						16 – 22 H
+					</div>
+					<div class="text-[2rem] leading-none lg:text-[4.875rem] lg:leading-[calc(87/121)]">
+						STERNECKSTR. 22, 5020
+					</div>
 				</div>
-				<picture>
-					<source srcset="/src/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
-					<img
-						src="/src/assets/images/logo_extasier_schwarz_600x600px.png"
-						alt="Extasier Kollektiv"
-					/>
-				</picture>
-				<SparkelSvg />
-				<SparkelSvg />
-				<div>
+				<div class="date-decoration-1">
+					<picture>
+						<source srcset="/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
+						<img
+							src="/assets/images/logo_extasier_schwarz_600x600px.png"
+							alt="Extasier Kollektiv"
+						/>
+					</picture>
+					<SparkelSvg />
+					<SparkelSvg />
+				</div>
+				<div class="date-decoration-2">
+					<SparkelSvg />
+					<SparkelSvg />
+				</div>
+				<div
+					class="justify-self-end text-[4rem] leading-none sideways-lr lg:text-[12.5rem] lg:leading-[calc(155/200)]"
+				>
 					<div>16.+17.</div>
 					<div>JULY '22</div>
 				</div>
-				<SparkelSvg />
-				<SparkelSvg />
 			</section>
 			<section class="mbe-44">
 				<header class="copy-header">
@@ -151,7 +160,7 @@
 				</p>
 			</section>
 		</main>
-		<footer class="flex flex-col gap-6 mbs-auto pbe-5 lg:flex-row lg:pbe-10">
+		<footer class="flex flex-col gap-6 mbs-auto pbe-5 lg:flex-row lg:gap-40 lg:pbe-10">
 			<div class="flex gap-3 lg:gap-4">
 				<a
 					href="https://www.instagram.com/extasier.kollektiv/"
@@ -169,13 +178,13 @@
 				</a>
 			</div>
 			<div class="footer-logos">
-				<picture>
-					<source srcset="/src/assets/images/outside_the_box@2x.png 2x" />
-					<img src="/src/assets/images/outside_the_box.png" alt="outside the box" />
+				<picture class="w-14">
+					<source srcset="/assets/images/outside_the_box@2x.png 2x" />
+					<img src="/assets/images/outside_the_box.png" alt="outside the box" />
 				</picture>
-				<picture>
-					<source srcset="/src/assets/images/super@2x.png 2x" />
-					<img src="/src/assets/images/super.png" alt="super" />
+				<picture class="w-16">
+					<source srcset="/assets/images/super@2x.png 2x" />
+					<img src="/assets/images/super.png" alt="super" />
 				</picture>
 				<TuesSvg />
 			</div>
@@ -188,6 +197,10 @@
 		::selection {
 			@apply bg-black text-primary;
 		}
+
+		:focus-visible {
+			@apply outline outline-1 outline-offset-2;
+		}
 	}
 
 	.header-bar {
@@ -198,7 +211,57 @@
 		}
 
 		:global(svg) {
-			@apply h-6 w-6 shrink-0 fill-current lg:h-10 lg:w-10;
+			@apply h-6 w-6 shrink-0 animate-sparkle fill-current motion-reduce:animate-none lg:h-10 lg:w-10;
+
+			:global(path) {
+				@apply origin-center animate-rotate motion-reduce:animate-none;
+			}
+		}
+	}
+
+	.date-section {
+		@apply grid place-items-start gap-y-32 font-heading font-bold mbe-52 lg:gap-y-0;
+
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.date-decoration-1 {
+		@apply flex flex-col justify-self-stretch;
+
+		:global(picture) {
+			@apply w-[32vw] self-end lg:w-60;
+		}
+
+		:global(svg) {
+			@apply animate-sparkle fill-current motion-reduce:animate-none;
+
+			&:nth-of-type(1) {
+				@apply h-16 w-16 lg:h-[8.5rem] lg:w-[8.5rem] lg:self-center lg:mie-36;
+			}
+
+			&:nth-of-type(2) {
+				@apply h-9 w-9 self-center lg:h-[4.5rem] lg:w-[4.5rem] lg:mbs-4;
+
+				animation-delay: 0.5s;
+			}
+		}
+	}
+
+	.date-decoration-2 {
+		@apply flex flex-col justify-self-stretch mbs-[80%] lg:mbs-[30%];
+
+		:global(svg) {
+			@apply animate-sparkle fill-current motion-reduce:animate-none;
+
+			&:nth-of-type(1) {
+				@apply h-7 w-7 self-end lg:h-16 lg:w-16 lg:self-center lg:mbe-16;
+			}
+
+			&:nth-of-type(2) {
+				@apply h-14 w-14 self-start mis-6 lg:h-[8.5rem] lg:w-[8.5rem] lg:mis-48;
+
+				animation-delay: 0.5s;
+			}
 		}
 	}
 
@@ -219,14 +282,19 @@
 	}
 
 	.footer-social {
-		@apply grid h-12 w-12 place-items-center bg-black lg:h-[4.375rem] lg:w-[4.375rem];
+		@apply grid h-12 w-12 place-items-center bg-black p-2 text-primary transition-colors lg:h-[4.375rem] lg:w-[4.375rem] lg:p-4;
+
+		&:hover,
+		&:focus-visible {
+			@apply bg-primary text-black;
+		}
 	}
 
 	.footer-logos {
-		@apply flex flex-wrap gap-4;
+		@apply flex flex-wrap items-center gap-7;
 
 		:global(svg) {
-			@apply hidden;
+			@apply w-20 break-before-left lg:break-before-auto;
 		}
 	}
 </style>

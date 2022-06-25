@@ -6,18 +6,21 @@
 
 @font-face {
 	font-family: 'Helvetica Condensed';
-	src: url('/src/assets/fonts/helvetica_condensed.ttf') format('truetype');
+	src: url('/assets/fonts/helvetica_condensed.woff2') format('woff2'),
+		url('/assets/fonts/helvetica_condensed.ttf') format('truetype');
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'Neue Helvetica Compressed';
-	src: url('/src/assets/fonts/neue_helvetica_59_compressed.ttf') format('truetype');
+	src: url('/assets/fonts/neue_helvetica_59_compressed.woff2') format('woff2'),
+		url('/assets/fonts/neue_helvetica_59_compressed.ttf') format('truetype');
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: 'Neue Helvetica Compressed';
-	src: url('/src/assets/fonts/neue_helvetica_79_compressed_bold.ttf') format('truetype');
+	src: url('/assets/fonts/neue_helvetica_79_compressed_bold.woff2') format('woff2'),
+		url('/assets/fonts/neue_helvetica_79_compressed_bold.ttf') format('truetype');
 	font-weight: bold;
 }

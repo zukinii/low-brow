@@ -18,6 +18,20 @@ const config = {
 					'sans-serif'
 				]
 			},
+			animation: {
+				sparkle: 'sparkle 1s linear infinite',
+				rotate: 'rotate 2s linear infinite'
+			},
+			keyframes: {
+				sparkle: {
+					'0%, 100%': { transform: 'scale(0.1)', opacity: '0.1' },
+					'50%': { transform: 'scale(1)', opacity: '1' }
+				},
+				rotate: {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				}
+			},
 			container: {
 				center: true,
 				padding: {
@@ -29,7 +43,7 @@ const config = {
 		}
 	},
 	plugins: [
-		plugin(function ({ matchUtilities, theme }) {
+		plugin(function ({ matchUtilities, theme, addUtilities }) {
 			matchUtilities(
 				{
 					mi: (value) => ({
@@ -70,7 +84,24 @@ const config = {
 					})
 				},
 				{ values: { ...theme('spacing'), auto: 'auto' } }
-			)
+			),
+				addUtilities({
+					'.horizontal-tb': {
+						writingMode: 'horizontal-tb'
+					},
+					'.vertical-rl': {
+						writingMode: 'vertical-rl'
+					},
+					'.vertical-lr': {
+						writingMode: 'vertical-lr'
+					},
+					'.sideways-rl': {
+						writingMode: 'sideways-rl'
+					},
+					'.sideways-lr': {
+						writingMode: 'sideways-lr'
+					}
+				})
 		})
 	]
 }
