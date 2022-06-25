@@ -1,26 +1,33 @@
 const plugin = require('tailwindcss/plugin')
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
 			colors: {
 				primary: '#F5FC00'
 			},
+			fontFamily: {
+				copy: ['"Helvetica Condensed"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+				heading: [
+					'"Neue Helvetica Compressed"',
+					'"Helvetica Neue"',
+					'Helvetica',
+					'Arial',
+					'sans-serif'
+				]
+			},
 			container: {
 				center: true,
 				padding: {
 					DEFAULT: '1rem',
 					sm: '2rem',
-					lg: '4rem',
-					xl: '5rem',
-					'2xl': '6rem'
+					lg: '2.75rem'
 				}
 			}
 		}
 	},
-
 	plugins: [
 		plugin(function ({ matchUtilities, theme }) {
 			matchUtilities(
@@ -67,3 +74,5 @@ module.exports = {
 		})
 	]
 }
+
+module.exports = config

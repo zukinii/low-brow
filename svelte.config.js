@@ -15,7 +15,13 @@ const config = {
 					}
 				}
 			},
-			plugins: [svg()]
+			plugins: [svg()],
+			server: {
+				fs: {
+					// allow access to import file from root directory
+					// allow: ['.']
+				}
+			}
 		}
 	},
 
@@ -25,7 +31,9 @@ const config = {
 
 			scss: {
 				prependData: '@use "src/variables.scss" as *;'
-			}
+			},
+
+			preserve: ['ld+json']
 		})
 	]
 }
