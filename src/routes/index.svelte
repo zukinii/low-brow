@@ -76,7 +76,7 @@
 			</div>
 			<h1 class="font-heading font-bold">
 				<div
-					class="translate-y-1 -translate-x-[0.125rem] transform text-[50vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:translate-y-4 lg:text-[18.75rem] xl:-translate-x-2 xl:translate-y-6 xl:text-[24rem] 2xl:text-[29rem]"
+					class="translate-y-1 -translate-x-[0.125rem] transform text-[50vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:translate-y-4 lg:text-[18.75rem] xl:-translate-x-2 xl:translate-y-2 xl:text-[24rem] 2xl:text-[29rem]"
 				>
 					LOW BROW
 				</div>
@@ -213,7 +213,6 @@
 				</picture>
 				<TuesSvg />
 				<picture class="w-20">
-					<source srcset="/assets/images/wabe@2x.png 2x" />
 					<img src="/assets/images/wabe.png" alt="wabe" />
 				</picture>
 			</div>
@@ -246,7 +245,7 @@
 
 		// custom scrollbar for chromium (https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar)
 		&::-webkit-scrollbar {
-			width: 2em;
+			width: 1em;
 		}
 		&::-webkit-scrollbar-track {
 			@apply bg-primary;
