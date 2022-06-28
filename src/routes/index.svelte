@@ -58,7 +58,7 @@
 	</picture>
 	<div class="pointer-events-none fixed bottom-0 left-0 right-0 z-20">
 		<div class="container flex items-center justify-end">
-			<picture class="w-[30vw] lg:w-56">
+			<picture class="w-[var(--extasier-logo-width)]">
 				<source srcset="/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
 				<img src="/assets/images/logo_extasier_schwarz_600x600px.png" alt="Extasier Kollektiv" />
 			</picture>
@@ -115,7 +115,12 @@
 			<section class="mbe-44">
 				<header class="copy-header">
 					<h2>WE LIKE IT LOW BRO(W)</h2>
-					<p>KUNST ALS SPEKTAKEL DES ALLTÄGLICHEN LEBENS.</p>
+				</header>
+				<div class="mbe-8 lg:mbe-28">
+					<p class="copy">Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“ Eine Kunst die Schwächen als Talente nutzt und selbst die banalsten Alltagssituationen zum ihrem Thema macht. Das ist LOW BROW und das sind WIR – KOLLEKTIV EXTASIER.</p>
+				</div>
+				<header class="copy-header">
+					<p>KUNST ALS SPEKTAKEL BANALEN</p>
 				</header>
 				<div class="flex">
 					<div>
@@ -207,6 +212,10 @@
 					<img src="/assets/images/super.png" alt="super" />
 				</picture>
 				<TuesSvg />
+				<picture class="w-20">
+					<source srcset="/assets/images/wabe@2x.png 2x" />
+					<img src="/assets/images/wabe.png" alt="wabe" />
+				</picture>
 			</div>
 		</footer>
 	</div>
@@ -214,6 +223,14 @@
 
 <style lang="scss">
 	:global() {
+		&:root {
+			--extasier-logo-width: 30vw;
+
+			@screen lg {
+				--extasier-logo-width: 14rem;
+			}
+		}
+
 		::selection {
 			@apply bg-black text-primary;
 		}
@@ -374,10 +391,10 @@
 	}
 
 	.footer-logos {
-		@apply flex flex-wrap items-center gap-7;
+		@apply flex flex-wrap items-center gap-7 pie-[calc(var(--extasier-logo-width)+1rem)];
 
 		:global(svg) {
-			@apply w-20 break-before-left lg:break-before-auto;
+			@apply w-20;
 		}
 	}
 </style>
