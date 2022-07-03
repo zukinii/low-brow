@@ -3,6 +3,7 @@
 	import FacebookSvg from '/src/svgs/facebook.svg'
 	import InstaSvg from '/src/svgs/insta.svg'
 	import TuesSvg from '/src/svgs/tues.svg'
+	import Copy from '$lib/copy/Copy.svelte'
 </script>
 
 <svelte:head>
@@ -52,22 +53,6 @@
 </svelte:head>
 
 <div class="bg-primary font-copy text-black">
-	<picture
-		class="container fixed top-1/2 left-1/2 grid max-h-screen w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 transform place-items-center"
-	>
-		<source srcset="/assets/images/baby.webp" type="image/webp" />
-		<source srcset="/assets/images/baby@2x.webp 2x" type="image/webp" />
-		<source srcset="/assets/images/baby@2x.png 2x" type="image/png" />
-		<img src="/assets/images/baby.png" alt="baby" />
-	</picture>
-	<div class="pointer-events-none fixed bottom-0 left-0 right-0 z-20">
-		<div class="container flex items-center justify-end">
-			<picture class="w-[var(--extasier-logo-width)]">
-				<source srcset="/assets/images/logo_extasier_schwarz_600x600px@2x.png 2x" />
-				<img src="/assets/images/logo_extasier_schwarz_600x600px.png" alt="Extasier Kollektiv" />
-			</picture>
-		</div>
-	</div>
 	<div class="container relative z-10 flex min-h-screen flex-col justify-start">
 		<header class="pbs-5 mbe-24 lg:pbs-10">
 			<div class="header-bar">
@@ -121,39 +106,32 @@
 					<h2>WE LIKE IT LOW BRO(W)</h2>
 				</header>
 				<div class="mbe-8 lg:mbe-28">
-					<p class="copy">
-						<span class="bg-primary"
-							>Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu
-							sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und
-							Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“
-							Eine Kunst die Schwächen als Talente deutet und selbst die banalsten
-							Alltagssituationen zum ihrem Thema macht. Das ist LOW BROW und das sind WIR –
-							KOLLEKTIV EXTASIER.</span
-						>
-					</p>
+					<Copy
+						>Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu
+						sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und
+						Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“ Eine
+						Kunst die Schwächen als Talente deutet und selbst die banalsten Alltagssituationen zum
+						ihrem Thema macht. Das ist LOW BROW und das sind WIR – KOLLEKTIV EXTASIER.</Copy
+					>
 				</div>
 				<header class="copy-header">
 					<p>KUNST ALS SPEKTAKEL DES BANALEN</p>
 				</header>
 				<div class="flex">
 					<div>
-						<p class="copy">
-							<span class="bg-primary"
-								>Diese Ausstellung widmen wir der vermeintlich intellektuell anspruchslosen Kunst:
-								Low-Brow! Was macht Kunst zur Kunst? Braucht sie die weiße Wand und perfekte
-								Inszenierung?</span
-							>
-						</p>
-						<p class="copy">
-							<span class="bg-primary"
-								>Wir nehmen das in unserer Ausstellung selbst in die Hand und emanzipieren Schönes
-								und Kunstvolles des alltäglichen Lebens durch die museale Zurschaustellung. Wir
-								präsentieren Techniken und Werke, Materialien und Formate, die in uns die Frage
-								aufrufen, ob sie kunstwürdig sind. In der LOW BROW-Ausstellung werden rund 30 Werke
-								aus den Bereichen Bildhauerei, Malerei, Architektur, Publikation, Installation,
-								digitale Formate und mehr, ausgestellt.</span
-							>
-						</p>
+						<Copy
+							>Diese Ausstellung widmen wir der vermeintlich intellektuell anspruchslosen Kunst:
+							Low-Brow! Was macht Kunst zur Kunst? Braucht sie die weiße Wand und perfekte
+							Inszenierung?</Copy
+						>
+						<Copy
+							>Wir nehmen das in unserer Ausstellung selbst in die Hand und emanzipieren Schönes und
+							Kunstvolles des alltäglichen Lebens durch die museale Zurschaustellung. Wir
+							präsentieren Techniken und Werke, Materialien und Formate, die in uns die Frage
+							aufrufen, ob sie kunstwürdig sind. In der LOW BROW-Ausstellung werden rund 30 Werke
+							aus den Bereichen Bildhauerei, Malerei, Architektur, Publikation, Installation,
+							digitale Formate und mehr, ausgestellt.</Copy
+						>
 					</div>
 					<div class="copy-decoration-1">
 						<SparkelSvg />
@@ -173,24 +151,20 @@
 				</header>
 				<div class="flex">
 					<div>
-						<p class="copy">
-							<span class="bg-primary"
-								>Wir sind eine plurale Gruppe mit Headquarter in Salzburg, die sich aus den
-								verschiedensten Disziplinen und Interessen zusammensetzt. Wir – Künstler*innen,
-								Handwerker*innen, Arbeiter*innen, Reisende, Entwerfer*innen, Forscher*innen – haben
-								uns alliiert und sind zusammen das Kunstkollektiv EXTASIER.</span
-							>
-						</p>
-						<p class="copy">
-							<span class="bg-primary"
-								>Es geht nicht immer um den Ort, an dem Kunst passiert. Niemand gibt vor, was es ist
-								oder wohin es geht: Die Kiste mit der Katze ist unser Schaffensraum! Wir wollen
-								niemanden ausschließen, jedes Material verwenden, Fähigkeiten sowie Ideenlosigkeit
-								zelebrieren und damit alle Facetten der Kunst neu beschreben – nichts erfüllen.
-								Gerade durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
-								gesellschaftliche Thematiken, die uns alle betreffen können, sichtbar machen.</span
-							>
-						</p>
+						<Copy
+							>Wir sind eine plurale Gruppe mit Headquarter in Salzburg, die sich aus den
+							verschiedensten Disziplinen und Interessen zusammensetzt. Wir – Künstler*innen,
+							Handwerker*innen, Arbeiter*innen, Reisende, Entwerfer*innen, Forscher*innen – haben
+							uns alliiert und sind zusammen das Kunstkollektiv EXTASIER.</Copy
+						>
+						<Copy
+							>Es geht nicht immer um den Ort, an dem Kunst passiert. Niemand gibt vor, was es ist
+							oder wohin es geht: Die Kiste mit der Katze ist unser Schaffensraum! Wir wollen
+							niemanden ausschließen, jedes Material verwenden, Fähigkeiten sowie Ideenlosigkeit
+							zelebrieren und damit alle Facetten der Kunst neu beschreben – nichts erfüllen. Gerade
+							durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
+							gesellschaftliche Thematiken, die uns alle betreffen können, sichtbar machen.</Copy
+						>
 					</div>
 					<div class="copy-decoration-3">
 						<SparkelSvg />
@@ -232,6 +206,24 @@
 				</picture>
 			</div>
 		</footer>
+	</div>
+	<picture
+		class="container fixed top-1/2 left-1/2 grid max-h-screen w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 transform place-items-center"
+	>
+		<source srcset="/assets/images/baby.webp" type="image/webp" />
+		<source srcset="/assets/images/baby@2x.webp 2x" type="image/webp" />
+		<source srcset="/assets/images/baby@2x.png 2x" type="image/png" />
+		<img src="/assets/images/baby.png" alt="baby" />
+	</picture>
+	<div class="pointer-events-none fixed bottom-0 left-0 right-0 z-20">
+		<div class="container flex items-center justify-end">
+			<picture class="w-[var(--extasier-logo-width)]">
+				<source srcset="/assets/images/logo-extasier.webp" type="image/webp" />
+				<source srcset="/assets/images/logo-extasier@2x.webp 2x" type="image/webp" />
+				<source srcset="/assets/images/logo-extasier@2x.png 2x" type="image/png" />
+				<img src="/assets/images/logo-extasier.png" alt="Extasier Kollektiv" />
+			</picture>
+		</div>
 	</div>
 </div>
 
@@ -353,10 +345,6 @@
 		:global(p) {
 			@apply max-w-5xl text-5xl uppercase tracking-[0.96px] lg:text-7xl lg:leading-[calc(115/123)] lg:tracking-[2.46px] 2xl:text-9xl;
 		}
-	}
-
-	.copy {
-		@apply text-2xl leading-[calc(36/24)] lg:max-w-[754px] [&:not(:last-child)]:mbe-12 lg:[&:not(:last-child)]:mbe-8;
 	}
 
 	.copy-decoration-1 {
