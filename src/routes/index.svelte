@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-	<title>LOW BROW EXHIBITION - extasier-kollektiv</title>
+	<title>LOW BROW Exhibition - extasier-kollektiv</title>
 	<meta name="description" content="LOW BROW Exhibition - Art as spectacle of everyday life" />
 	<meta name="theme-color" content="#F5FC00" />
 	<meta property="og:image" content="/assets/images/baby-bg.png" />
@@ -34,7 +34,9 @@
           "addressCountry": "Österreich"
         }
       },
-      "image": [],
+      "image": [
+				"/assets/images/baby-bg.png"
+			],
       "description": "Kunst als Spektakel des alltäglichen Lebens",
       "performer": {
         "@type": "PerformingGroup",
@@ -53,7 +55,9 @@
 	<picture
 		class="container fixed top-1/2 left-1/2 grid max-h-screen w-full max-w-2xl -translate-x-1/2 -translate-y-1/2 transform place-items-center"
 	>
-		<source srcset="/assets/images/baby@2x.png 2x" />
+		<source srcset="/assets/images/baby.webp" type="image/webp" />
+		<source srcset="/assets/images/baby@2x.webp 2x" type="image/webp" />
+		<source srcset="/assets/images/baby@2x.png 2x" type="image/png" />
 		<img src="/assets/images/baby.png" alt="baby" />
 	</picture>
 	<div class="pointer-events-none fixed bottom-0 left-0 right-0 z-20">
@@ -76,7 +80,7 @@
 			</div>
 			<h1 class="font-heading font-bold">
 				<div
-					class="translate-y-1 -translate-x-[0.125rem] transform text-[50vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:translate-y-4 lg:text-[18.75rem] xl:-translate-x-2 xl:translate-y-2 xl:text-[24rem] 2xl:text-[29rem]"
+					class="translate-y-1 -translate-x-[0.125rem] transform text-[50vw] leading-[calc(155/202)] sm:text-[21rem] md:whitespace-nowrap md:text-[14rem] lg:translate-y-4 lg:text-[18.75rem] xl:-translate-x-2 xl:translate-y-6 xl:text-[24rem] 2xl:text-[29rem]"
 				>
 					LOW BROW
 				</div>
@@ -117,10 +121,19 @@
 					<h2>WE LIKE IT LOW BRO(W)</h2>
 				</header>
 				<div class="mbe-8 lg:mbe-28">
-					<p class="copy"><span class="bg-primary">Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“ Eine Kunst die Schwächen als Talente nutzt und selbst die banalsten Alltagssituationen zum ihrem Thema macht. Das ist LOW BROW und das sind WIR – KOLLEKTIV EXTASIER.</span></p>
+					<p class="copy">
+						<span class="bg-primary"
+							>Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu
+							sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und
+							Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“
+							Eine Kunst die Schwächen als Talente deutet und selbst die banalsten
+							Alltagssituationen zum ihrem Thema macht. Das ist LOW BROW und das sind WIR –
+							KOLLEKTIV EXTASIER.</span
+						>
+					</p>
 				</div>
 				<header class="copy-header">
-					<p>KUNST ALS SPEKTAKEL BANALEN</p>
+					<p>KUNST ALS SPEKTAKEL DES BANALEN</p>
 				</header>
 				<div class="flex">
 					<div>
@@ -156,7 +169,7 @@
 							<SparkelSvg />
 						</div>
 					</div>
-					<p>WIR STELLEN UNS VOR.</p>
+					<p>WIR STELLEN UNS VOR</p>
 				</header>
 				<div class="flex">
 					<div>
@@ -190,6 +203,7 @@
 				<a
 					href="https://www.instagram.com/extasier.kollektiv/"
 					target="_blank"
+					aria-label="Instagram"
 					class="footer-social"
 				>
 					<InstaSvg />
@@ -197,6 +211,7 @@
 				<a
 					href="https://www.facebook.com/pages/category/Art/Extasier-Kollektiv-107480537508069/"
 					target="_blank"
+					aria-label="Facebook"
 					class="footer-social"
 				>
 					<FacebookSvg />
@@ -205,15 +220,15 @@
 			<div class="footer-logos">
 				<picture class="w-14">
 					<source srcset="/assets/images/outside_the_box@2x.png 2x" />
-					<img src="/assets/images/outside_the_box.png" alt="outside the box" />
+					<img src="/assets/images/outside_the_box.png" alt="outside the box" loading="lazy" />
 				</picture>
 				<picture class="w-16">
 					<source srcset="/assets/images/super@2x.png 2x" />
-					<img src="/assets/images/super.png" alt="super" />
+					<img src="/assets/images/super.png" alt="super" loading="lazy" />
 				</picture>
 				<TuesSvg />
 				<picture class="w-20">
-					<img src="/assets/images/wabe.png" alt="wabe" />
+					<img src="/assets/images/wabe.png" alt="wabe" loading="lazy" />
 				</picture>
 			</div>
 		</footer>
