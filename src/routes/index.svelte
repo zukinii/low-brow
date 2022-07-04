@@ -161,8 +161,8 @@
 							>Es geht nicht immer um den Ort, an dem Kunst passiert. Niemand gibt vor, was es ist
 							oder wohin es geht: Die Kiste mit der Katze ist unser Schaffensraum! Wir wollen
 							niemanden ausschließen, jedes Material verwenden, Fähigkeiten sowie Ideenlosigkeit
-							zelebrieren und damit alle Facetten der Kunst neu beschreben – nichts erfüllen. Gerade
-							durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
+							zelebrieren und damit alle Facetten der Kunst neu beschreiben – nichts erfüllen.
+							Gerade durch die künstlerische Arbeit und Auseinandersetzung, wollen wir soziale und
 							gesellschaftliche Thematiken, die uns alle betreffen können, sichtbar machen.</Copy
 						>
 					</div>
