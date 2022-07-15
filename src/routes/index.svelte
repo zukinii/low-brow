@@ -107,11 +107,7 @@
 				</header>
 				<div class="mbe-8 lg:mbe-28">
 					<Copy
-						>Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu
-						sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und
-						Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“ Eine
-						Kunst die Schwächen als Talente deutet und selbst die banalsten Alltagssituationen zum
-						ihrem Thema macht. Das ist LOW BROW und das sind WIR – KOLLEKTIV EXTASIER.</Copy
+						>Denn wir sind für eine Kunst, die etwas anderes tut, als im Museum auf ihrem Arsch zu sitzen! Die niemanden ausschließt, jedes Material verwendet, Fähigkeiten und Ideenlosigkeit zelebriert und die Frage stellt „Ist das Kunst, oder kann das weg?“ Eine Kunst die Schwächen als Talente deutet und selbst die banalsten Alltagssituationen zu ihrem Thema macht. Das ist LOW BROW und das sind WIR – KOLLEKTIV EXTASIER.</Copy
 					>
 				</div>
 				<header class="copy-header">
